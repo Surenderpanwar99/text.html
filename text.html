@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    
+
+
+
+<div class="awsui-app-layout__content">
+    <div role="region" class="awsui-app-layout__notifications">
+        <div awsui-app-layout-region="notifications"><span><awsui-flashbar data-reactroot=""
+                    initialized="true"></awsui-flashbar></span></div>
+    </div>
+    <div class="awsui-app-layout__content--scrollable" style="min-width: 280px;">
+        <div awsui-app-layout-region="content"><span>
+                <div data-reactroot="" id="translationContainer" class="translationContainer">
+                    <div id="breadcrumbPanel" class="awsui-util-mb-s"><awsui-breadcrumb-group initialized="true">
+                            <nav awsui-breadcrumb-group-region="content" class="awsui-breadcrumb-group"><span><span
+                                        data-reactroot=""><awsui-breadcrumb-item id="breadcrumbTranslate"
+                                            initialized="true">
+                                            <div class="awsui-breadcrumb"><a href="#welcome"
+                                                    class="awsui-breadcrumb-link"><span
+                                                        class="awsui-breadcrumb-link-text">Amazon
+                                                        Translate</span></a><awsui-icon initialized="true"><span
+                                                        class="awsui-icon awsui-icon-size-normal awsui-icon-variant-disabled"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                            focusable="false" aria-hidden="true">
+                                                            <path d="M4 1l7 7-7 7"></path>
+                                                        </svg></span></awsui-icon></div>
+                                        </awsui-breadcrumb-item><awsui-breadcrumb-item initialized="true">
+                                            <div class="awsui-breadcrumb"><a href="#translation"
+                                                    class="awsui-breadcrumb-link"><span
+                                                        class="awsui-breadcrumb-link-text">Real-time
+                                                        translation</span></a><awsui-icon initialized="true"><span
+                                                        class="awsui-icon awsui-icon-size-normal awsui-icon-variant-disabled"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                            focusable="false" aria-hidden="true">
+                                                            <path d="M4 1l7 7-7 7"></path>
+                                                        </svg></span></awsui-icon></div>
+                                        </awsui-breadcrumb-item></span></span></nav>
+                        </awsui-breadcrumb-group></div>
+                    <h1 class="translationHeader" style="display: inline-block;">Real-time translation</h1><span><a
+                            id="translationHelpInfo" class="info-link">Info</a></span>
+                    <div id="translationCard" class="translationCard">
+                        <div class="awsui-util-container">
+                            <div class="awsui-util-container-header">
+                                <div class="awsui-util-action-stripe">
+                                    <div class="awsui-util-action-stripe-title">
+                                        <h2>Translation</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="awsui-grid">
+                                <div class="awsui-row">
+                                    <div class="col-xxs-5">
+                                        <div class="translationColumnHeader">Source language</div><awsui-select
+                                            id="source-select" initialized="true">
+                                            <div class="awsui-select-keyboard-area">
+                                                <div class=""><awsui-select-trigger initialized="true">
+                                                        <div class="awsui-dropdown-trigger awsui-select-trigger awsui-select-trigger-variant-label"
+                                                            override-focus="" aria-expanded="false"
+                                                            aria-labelledby="  awsui-select-0-textbox" role="button"
+                                                            aria-haspopup="listbox" tabindex="0" id="awsui-select-0">
+                                                            <div class="awsui-select-trigger-wrapper"><span
+                                                                    class="awsui-select-trigger-textbox"
+                                                                    id="awsui-select-0-textbox"><span
+                                                                        class="awsui-select-trigger-label">English
+                                                                        (en)</span></span><awsui-icon
+                                                                    class="awsui-select-trigger-icon"
+                                                                    initialized="true"><span
+                                                                        class="awsui-icon awsui-icon-size-normal awsui-icon-variant-normal"><svg
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 16 16" focusable="false"
+                                                                            aria-hidden="true">
+                                                                            <path class="filled stroke-linejoin-round"
+                                                                                d="M4 5h8l-4 6-4-6z"></path>
+                                                                        </svg></span></awsui-icon></div>
+                                                        </div>
+                                                    </awsui-select-trigger><awsui-select-dropdown initialized="true">
+                                                        <div class="awsui-select-dropdown awsui-select-dropdown-has-content"
+                                                            id="awsui-select-0-dropdown">
+                                                            <div awsui-select-dropdown-region="filter">
+                                                                <span><awsui-select-filter initialized="true">
+                                                                        <div><awsui-input
+                                                                                class="awsui-select-dropdown-filter"
+                                                                                initialized="true">
+                                                                                <div class="awsui-input-container">
+                                                                                    <span><awsui-icon
+                                                                                            class="awsui-input-icon awsui-input-icon-left"
+                                                                                            initialized="true"><span
+                                                                                                class="awsui-icon awsui-icon-size-normal awsui-icon-variant-subtle"><svg
+                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                    viewBox="0 0 16 16"
+                                                                                                    focusable="false"
+                                                                                                    aria-hidden="true">
+                                                                                                    <circle cx="7"
+                                                                                                        cy="7" r="5">
+                                                                                                    </circle>
+                                                                                                    <path
+                                                                                                        d="M15 15l-4.5-4.5">
+                                                                                                    </path>
+                                                                                                </svg></span></awsui-icon></span><input
+                                                                                        id="awsui-input-0"
+                                                                                        autocomplete="off"
+                                                                                        class="awsui-input awsui-input-has-icon-left awsui-input-type-text awsui-input-valid"
+                                                                                        type="text" spellcheck="false"
+                                                                                        aria-expanded="true"
+                                                                                        aria-haspopup="true"
+                                                                                        role="combobox"
+                                                                                        autocorrect="off"
+                                                                                        autocapitalize="off"
+                                                                                        aria-labelledby=""
+                                                                                        aria-controls="awsui-select-0-dropdown-options"
+                                                                                        aria-activedescendant=""></div>
+                                                                            </awsui-input></div>
+                                                                    </awsui-select-filter></span></div>
+                                                        </div>
+                                                    </awsui-select-dropdown></div>
+                                            </div>
+                                        </awsui-select>
+                                        <div class="awsui-util-mt-m leftToRightTextArea"><awsui-textarea
+                                                id="sourceTextTextarea" class="textField" initialized="true"><textarea
+                                                    class="awsui-textarea" rows="4" id="awsui-textarea-0"
+                                                    spellcheck="false"
+                                                    placeholder="Enter text"></textarea></awsui-textarea></div><small
+                                            class="awsui-util-mt-s"><!-- react-text: 134 -->0 characters, 0 of 5000
+                                            bytes used. <!-- /react-text --><a id="sourceTextCharacterLimitInfo"
+                                                class="feedbackLink">Info</a></small>
+                                        <div class="awsui-util-mt-s"></div>
+                                    </div>
+                                    <div class="col-xxs-2">
+                                        <div class="awsui-util-mt-xxl middle-box"><awsui-button id="swap-languages"
+                                                initialized="true"><button
+                                                    class="awsui-button awsui-button-no-text awsui-button-variant-normal awsui-hover-child-icons"
+                                                    type="submit" override-focus=""><awsui-icon
+                                                        class="awsui-button-icon awsui-button-icon-left"
+                                                        initialized="true"><span
+                                                            class="awsui-icon awsui-icon-size-normal awsui-icon-variant-normal"><img
+                                                                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOm5vbmU7c3Ryb2tlOiMxNjE5MUY7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS13aWR0aDoxLjJweH08L3N0eWxlPjwvZGVmcz48ZyBpZD0iaWNvbiI+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTAuNSAybDMgMy0zIDNNMTMuNSA1SDJNNS41IDhsLTMgMyAzIDNNMi41IDExSDE0Ii8+PC9nPjwvc3ZnPg=="
+                                                                alt=""></span></awsui-icon></button></awsui-button>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxs-5">
+                                        <div class="translationColumnHeader">Target language</div><awsui-select
+                                            id="target-select" initialized="true">
+                                            <div class="awsui-select-keyboard-area">
+                                                <div class=""><awsui-select-trigger initialized="true">
+                                                        <div class="awsui-dropdown-trigger awsui-select-trigger awsui-select-trigger-variant-label"
+                                                            override-focus="" aria-expanded="false"
+                                                            aria-labelledby="  awsui-select-1-textbox" role="button"
+                                                            aria-haspopup="listbox" tabindex="0" id="awsui-select-1">
+                                                            <div class="awsui-select-trigger-wrapper"><span
+                                                                    class="awsui-select-trigger-textbox"
+                                                                    id="awsui-select-1-textbox"><span
+                                                                        class="awsui-select-trigger-label">Spanish
+                                                                        (es)</span></span><awsui-icon
+                                                                    class="awsui-select-trigger-icon"
+                                                                    initialized="true"><span
+                                                                        class="awsui-icon awsui-icon-size-normal awsui-icon-variant-normal"><svg
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 16 16" focusable="false"
+                                                                            aria-hidden="true">
+                                                                            <path class="filled stroke-linejoin-round"
+                                                                                d="M4 5h8l-4 6-4-6z"></path>
+                                                                        </svg></span></awsui-icon></div>
+                                                        </div>
+                                                    </awsui-select-trigger><awsui-select-dropdown initialized="true">
+                                                        <div class="awsui-select-dropdown awsui-select-dropdown-has-content"
+                                                            id="awsui-select-1-dropdown">
+                                                            <div awsui-select-dropdown-region="filter">
+                                                                <span><awsui-select-filter initialized="true">
+                                                                        <div><awsui-input
+                                                                                class="awsui-select-dropdown-filter"
+                                                                                initialized="true">
+                                                                                <div class="awsui-input-container">
+                                                                                    <span><awsui-icon
+                                                                                            class="awsui-input-icon awsui-input-icon-left"
+                                                                                            initialized="true"><span
+                                                                                                class="awsui-icon awsui-icon-size-normal awsui-icon-variant-subtle"><svg
+                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                    viewBox="0 0 16 16"
+                                                                                                    focusable="false"
+                                                                                                    aria-hidden="true">
+                                                                                                    <circle cx="7"
+                                                                                                        cy="7" r="5">
+                                                                                                    </circle>
+                                                                                                    <path
+                                                                                                        d="M15 15l-4.5-4.5">
+                                                                                                    </path>
+                                                                                                </svg></span></awsui-icon></span><input
+                                                                                        id="awsui-input-1"
+                                                                                        autocomplete="off"
+                                                                                        class="awsui-input awsui-input-has-icon-left awsui-input-type-text awsui-input-valid"
+                                                                                        type="text" spellcheck="false"
+                                                                                        aria-expanded="true"
+                                                                                        aria-haspopup="true"
+                                                                                        role="combobox"
+                                                                                        autocorrect="off"
+                                                                                        autocapitalize="off"
+                                                                                        aria-labelledby=""
+                                                                                        aria-controls="awsui-select-1-dropdown-options"
+                                                                                        aria-activedescendant=""></div>
+                                                                            </awsui-input></div>
+                                                                    </awsui-select-filter></span></div>
+                                                        </div>
+                                                    </awsui-select-dropdown></div>
+                                            </div>
+                                        </awsui-select>
+                                        <div class="awsui-util-mt-m leftToRightTextArea"><awsui-textarea
+                                                id="targetTextTextarea" class="textField" initialized="true"><textarea
+                                                    class="awsui-textarea" rows="4" id="awsui-textarea-1"
+                                                    spellcheck="false"
+                                                    placeholder="Translated text"></textarea></awsui-textarea></div>
+                                        <div class="translateLeaveFeedback"><!-- react-text: 146 -->Is this translation
+                                            what you expected? <!-- /react-text --><!-- react-text: 147 -->Please leave
+                                            us <!-- /react-text --><a id="translationFeedback"
+                                                class="feedbackLink">feedback</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="top-boarder"><awsui-expandable-section id="additionalSettingSection"
+                                    initialized="true">
+                                    <div class="awsui-expandable-section">
+                                        <div id="awsui-expandable-section-1-trigger"
+                                            aria-controls="awsui-expandable-section-1" aria-expanded="false"
+                                            override-focus="" role="button" tabindex="0"
+                                            class="awsui-expandable-section-header awsui-expandable-section-header-borderless awsui-expandable-section-trigger">
+                                            <div
+                                                class="awsui-expandable-section-header-icon awsui-expandable-section-header-icon-borderless">
+                                                <awsui-icon initialized="true"><span
+                                                        class="awsui-icon awsui-icon-size-normal awsui-icon-variant-normal"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                            focusable="false" aria-hidden="true">
+                                                            <path class="filled stroke-linejoin-round"
+                                                                d="M4 5h8l-4 6-4-6z"></path>
+                                                        </svg></span></awsui-icon></div>
+                                            <div awsui-expandable-section-region="header">Additional settings</div>
+                                        </div>
+                                        <div id="awsui-expandable-section-1" role="region"
+                                            aria-labelledby="awsui-expandable-section-1-trigger"
+                                            awsui-expandable-section-region="content"
+                                            class="awsui-expandable-section-content awsui-expandable-section-content-borderless">
+                                            <span>
+                                                <div data-reactroot="" class="awsui-util-mh-s">
+                                                    <div class="awsui-util-mt-m">
+                                                        <div class="awsui-util-d-ib"><awsui-toggle
+                                                                id="translation_customTerminologyToggle"
+                                                                initialized="true"><label class="awsui-toggle"
+                                                                    for="awsui-toggle-0"
+                                                                    id="awsui-toggle-0-label"><input
+                                                                        class="awsui-toggle-native-input"
+                                                                        type="checkbox" override-focus=""
+                                                                        id="awsui-toggle-0">
+                                                                    <div class="awsui-toggle-styled-box">
+                                                                        <div class="awsui-toggle-handle"></div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="awsui-toggle-label"
+                                                                            awsui-toggle-region="label">Custom
+                                                                            terminology</div>
+                                                                    </div>
+                                                                </label></awsui-toggle></div>
+                                                        <div class="awsui-util-d-ib vertical-align-top"><a
+                                                                id="translation_customTerminologyInfo"
+                                                                class="api-info-link">Info</a></div>
+                                                    </div>
+                                                    <div class="awsui-util-mt-m">
+                                                        <div class="awsui-util-d-ib"><awsui-toggle
+                                                                id="translation_formalityToggle"
+                                                                initialized="true"><label class="awsui-toggle"
+                                                                    for="awsui-toggle-1"
+                                                                    id="awsui-toggle-1-label"><input
+                                                                        class="awsui-toggle-native-input"
+                                                                        type="checkbox" override-focus=""
+                                                                        id="awsui-toggle-1">
+                                                                    <div class="awsui-toggle-styled-box">
+                                                                        <div class="awsui-toggle-handle"></div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="awsui-toggle-label"
+                                                                            awsui-toggle-region="label">Formality</div>
+                                                                    </div>
+                                                                </label></awsui-toggle></div>
+                                                        <div class="translationSettingsDescription">Choose whether the
+                                                            translation output uses a formal tone. Not all languages are
+                                                            supported.</div>
+                                                    </div>
+                                                    <div class="awsui-util-mt-m">
+                                                        <div class="awsui-util-d-ib"><awsui-toggle
+                                                                id="translation_profanityToggle"
+                                                                initialized="true"><label class="awsui-toggle"
+                                                                    for="awsui-toggle-2"
+                                                                    id="awsui-toggle-2-label"><input
+                                                                        class="awsui-toggle-native-input"
+                                                                        type="checkbox" override-focus=""
+                                                                        id="awsui-toggle-2">
+                                                                    <div class="awsui-toggle-styled-box">
+                                                                        <div class="awsui-toggle-handle"></div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="awsui-toggle-label"
+                                                                            awsui-toggle-region="label">Profanity</div>
+                                                                    </div>
+                                                                </label></awsui-toggle></div>
+                                                        <div class="awsui-util-d-ib vertical-align-top"><a
+                                                                id="translation_profanityInfo"
+                                                                class="api-info-link">Info</a></div>
+                                                        <div class="translationSettingsDescription">Choose whether the
+                                                            translation output masks profane words or phrases. Not all
+                                                            languages are supported.</div>
+                                                    </div>
+                                                </div>
+                                            </span></div>
+                                    </div>
+                                </awsui-expandable-section></div>
+                        </div>
+                    </div>
+                    <div class="awsui-util-mb-l"><!-- react-empty: 152 --></div>
+                    <div><awsui-expandable-section id="translation_appIntegSection" initialized="true">
+                            <div class="awsui-expandable-section awsui-util-container">
+                                <div id="awsui-expandable-section-2-trigger" aria-controls="awsui-expandable-section-2"
+                                    aria-expanded="false" override-focus="" role="button" tabindex="0"
+                                    class="awsui-expandable-section-header awsui-expandable-section-header-container awsui-expandable-section-trigger awsui-util-container-header">
+                                    <div
+                                        class="awsui-expandable-section-header-icon awsui-expandable-section-header-icon-container">
+                                        <awsui-icon initialized="true"><span
+                                                class="awsui-icon awsui-icon-size-normal awsui-icon-variant-normal"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                    focusable="false" aria-hidden="true">
+                                                    <path class="filled stroke-linejoin-round" d="M4 5h8l-4 6-4-6z">
+                                                    </path>
+                                                </svg></span></awsui-icon></div>
+                                    <div awsui-expandable-section-region="header">Application integration</div>
+                                </div>
+                                <div id="awsui-expandable-section-2" role="region"
+                                    aria-labelledby="awsui-expandable-section-2-trigger"
+                                    awsui-expandable-section-region="content"
+                                    class="awsui-expandable-section-content awsui-expandable-section-content-container">
+                                    <span>
+                                        <div data-reactroot="">
+                                            <div>
+                                                <p class="learn-more-text"><!-- react-text: 4 -->Learn more about
+                                                    working with the Translate service using APIs for automation and
+                                                    larger volumes of text.<!-- /react-text --><span><a
+                                                            id="applicationIntegrationInfo"
+                                                            class="api-info-link">Info</a></span></p>
+                                            </div>
+                                            <div class="codeSamplesContent">
+                                                <div class="codeSamplesSection">
+                                                    <div class="awsui-grid">
+                                                        <div class="awsui-row">
+                                                            <div class="col-xxs-12 col-s-6 col-l-6">
+                                                                <div id="applicationIntegration_JsonReq">
+                                                                    <div class="jsonContainer">
+                                                                        <div class="jsonTextareaHeader awsui-util-mb-m">
+                                                                            JSON request</div>
+                                                                        <div class="jsonCodeContainer codeColumn">
+                                                                            <div id="json_output_section"
+                                                                                class=" ace_editor ace-tm jsonTextarea"
+                                                                                style="width: 100%; height: 300px;">
+                                                                                <textarea class="ace_text-input"
+                                                                                    wrap="off" autocorrect="off"
+                                                                                    autocapitalize="off"
+                                                                                    spellcheck="false"
+                                                                                    style="opacity: 0;"></textarea>
+                                                                                <div class="ace_gutter"
+                                                                                    aria-hidden="true">
+                                                                                    <div
+                                                                                        class="ace_layer ace_gutter-layer ace_folding-enabled">
+                                                                                    </div>
+                                                                                    <div class="ace_gutter-active-line">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="ace_scroller">
+                                                                                    <div class="ace_content">
+                                                                                        <div
+                                                                                            class="ace_layer ace_print-margin-layer">
+                                                                                            <div class="ace_print-margin"
+                                                                                                style="left: 4px; visibility: hidden;">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="ace_layer ace_marker-layer">
+                                                                                        </div>
+                                                                                        <div class="ace_layer ace_text-layer"
+                                                                                            style="padding: 0px 4px;">
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="ace_layer ace_marker-layer">
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="ace_layer ace_cursor-layer ace_hidden-cursors">
+                                                                                            <div class="ace_cursor">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="ace_scrollbar ace_scrollbar-v"
+                                                                                    style="display: none; width: 22px;">
+                                                                                    <div class="ace_scrollbar-inner"
+                                                                                        style="width: 22px;"></div>
+                                                                                </div>
+                                                                                <div class="ace_scrollbar ace_scrollbar-h"
+                                                                                    style="display: none; height: 22px;">
+                                                                                    <div class="ace_scrollbar-inner"
+                                                                                        style="height: 22px;"></div>
+                                                                                </div>
+                                                                                <div
+                                                                                    style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;">
+                                                                                    <div
+                                                                                        style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">
+                                                                                    </div>
+                                                                                    <div
+                                                                                        style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">
+                                                                                        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="codeSampleButton"><awsui-button
+                                                                                    id="jsonCopy" class="jsonCopy"
+                                                                                    initialized="true"><button
+                                                                                        class="awsui-button awsui-button-variant-normal awsui-hover-child-icons"
+                                                                                        type="submit"
+                                                                                        override-focus=""><awsui-icon
+                                                                                            class="awsui-button-icon awsui-button-icon-left"
+                                                                                            initialized="true"><span
+                                                                                                class="awsui-icon awsui-icon-size-normal awsui-icon-variant-normal"><svg
+                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                    viewBox="0 0 16 16"
+                                                                                                    focusable="false"
+                                                                                                    aria-hidden="true">
+                                                                                                    <path
+                                                                                                        class="stroke-linejoin-round"
+                                                                                                        d="M2 5h9v9H2z">
+                                                                                                    </path>
+                                                                                                    <path
+                                                                                                        class="stroke-linejoin-round"
+                                                                                                        d="M5 5V2h9v9h-3">
+                                                                                                    </path>
+                                                                                                </svg></span></awsui-icon><span
+                                                                                            awsui-button-region="text">Copy</span></button></awsui-button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xxs-12 col-s-6 col-l-6">
+                                                                <div id="applicationIntegration_JsonRes">
+                                                                    <div class="jsonContainer">
+                                                                        <div class="jsonTextareaHeader awsui-util-mb-m">
+                                                                            JSON response</div>
+                                                                        <div class="jsonCodeContainer codeColumn">
+                                                                            <div id="json_output_section"
+                                                                                class=" ace_editor ace-tm jsonTextarea"
+                                                                                style="width: 100%; height: 300px;">
+                                                                                <textarea class="ace_text-input"
+                                                                                    wrap="off" autocorrect="off"
+                                                                                    autocapitalize="off"
+                                                                                    spellcheck="false"
+                                                                                    style="opacity: 0;"></textarea>
+                                                                                <div class="ace_gutter"
+                                                                                    aria-hidden="true">
+                                                                                    <div
+                                                                                        class="ace_layer ace_gutter-layer ace_folding-enabled">
+                                                                                    </div>
+                                                                                    <div class="ace_gutter-active-line">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="ace_scroller">
+                                                                                    <div class="ace_content">
+                                                                                        <div
+                                                                                            class="ace_layer ace_print-margin-layer">
+                                                                                            <div class="ace_print-margin"
+                                                                                                style="left: 4px; visibility: hidden;">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="ace_layer ace_marker-layer">
+                                                                                        </div>
+                                                                                        <div class="ace_layer ace_text-layer"
+                                                                                            style="padding: 0px 4px;">
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="ace_layer ace_marker-layer">
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="ace_layer ace_cursor-layer ace_hidden-cursors">
+                                                                                            <div class="ace_cursor">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="ace_scrollbar ace_scrollbar-v"
+                                                                                    style="display: none; width: 22px;">
+                                                                                    <div class="ace_scrollbar-inner"
+                                                                                        style="width: 22px;"></div>
+                                                                                </div>
+                                                                                <div class="ace_scrollbar ace_scrollbar-h"
+                                                                                    style="display: none; height: 22px;">
+                                                                                    <div class="ace_scrollbar-inner"
+                                                                                        style="height: 22px;"></div>
+                                                                                </div>
+                                                                                <div
+                                                                                    style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;">
+                                                                                    <div
+                                                                                        style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">
+                                                                                    </div>
+                                                                                    <div
+                                                                                        style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">
+                                                                                        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="codeSampleButton"><awsui-button
+                                                                                    id="jsonCopy" class="jsonCopy"
+                                                                                    initialized="true"><button
+                                                                                        class="awsui-button awsui-button-variant-normal awsui-hover-child-icons"
+                                                                                        type="submit"
+                                                                                        override-focus=""><awsui-icon
+                                                                                            class="awsui-button-icon awsui-button-icon-left"
+                                                                                            initialized="true"><span
+                                                                                                class="awsui-icon awsui-icon-size-normal awsui-icon-variant-normal"><svg
+                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                    viewBox="0 0 16 16"
+                                                                                                    focusable="false"
+                                                                                                    aria-hidden="true">
+                                                                                                    <path
+                                                                                                        class="stroke-linejoin-round"
+                                                                                                        d="M2 5h9v9H2z">
+                                                                                                    </path>
+                                                                                                    <path
+                                                                                                        class="stroke-linejoin-round"
+                                                                                                        d="M5 5V2h9v9h-3">
+                                                                                                    </path>
+                                                                                                </svg></span></awsui-icon><span
+                                                                                            awsui-button-region="text">Copy</span></button></awsui-button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span></div>
+                            </div>
+                        </awsui-expandable-section></div>
+                </div>
+            </span></div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
